@@ -61,4 +61,55 @@
 
 
 
+# 5.Write a program that simulates rolling a dice (random numbers 1–6) until a 6 appears. 
+#   Skip printing the number 3 using continue.
+
+# import random
+
+# while True:
+#     num = random.randint(1, 6)  
+#     if num == 6:                  
+#         print("You rolled a 6! Loop ends.")
+#         break
+#     if num == 3:                 
+#         continue
+#     print("You rolled:", num)
+
+
+# 6.Continuously take input of student scores. If the score is negative, stop the loop. 
+#   Skip scores greater than 100 using continue.
+
+# while True:
+#     score = int(input())
+#     if score < 0:
+#         break
+#     if score > 100:
+#         continue
+#     print("your score is",score)
+
+
+# 7.Keep multiplying numbers starting from 1 (factorial style). 
+#   Stop if the product goes above 10,000. Skip multiplying with any 0 using continue.
+
+# i = 1
+# product = 1
+# while product <= 10000:
+#     product = product*i
+#     if product > 10000:
+#         break
+#     print(product)
+#     i += 1
+
+# 8.Keep asking the user to guess a secret number. If they guess correctly, stop.
+#   If they enter a number less than 0, skip without counting it as an attempt.
+
+while True:
+    num = int(input("enter number:"))
+    if num < 0:
+        continue
+    if num == 8:
+        print("You have guessed the number")
+        break
+    
+    print("keep trying")
    
