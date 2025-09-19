@@ -28,3 +28,22 @@
 
 
 # // 3. Find out non-repeating character in an array of integers 
+
+# def non_repeating_character(arr):
+#     for i in range(len(arr)):
+#         is_unique = True
+
+#         for j in range(len(arr)):
+#             if i != j and arr[i] == arr[j]:
+#                 is_unique = False
+#                 break
+
+#         if is_unique:
+#             return arr[i]
+        
+#     return None
+
+# arr = [10,10,4,5,4]
+# print(non_repeating_character(arr))
+
+
