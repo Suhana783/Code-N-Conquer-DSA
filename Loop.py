@@ -103,13 +103,119 @@
 # 8.Keep asking the user to guess a secret number. If they guess correctly, stop.
 #   If they enter a number less than 0, skip without counting it as an attempt.
 
-while True:
-    num = int(input("enter number:"))
-    if num < 0:
-        continue
-    if num == 8:
-        print("You have guessed the number")
-        break
+# count = 0
+# while True:
+#     num = int(input("enter number:"))
+#     if num < 0:
+#         continue
+#     count += 1
+
+#     if num == 8:
+#         print("You have guessed the number")
+#         break
+
+#     if count == 4:
+#         print("attempt over reached the limit",count)
+#         break
     
-    print("keep trying")
+#     print("keep trying",count)
+
+
+# 9.Start with a number n = 1. Keep incrementing and printing it.
+#   Skip printing multiples of 7 using continue. Break the loop when n becomes greater than 100.
+
+# n = 1
+# while n <= 100:
+#     if n % 7 == 0:
+#         n += 1
+#         continue
+#     if n > 100:
+#         break
+#     print(n)
+#     n += 1
+
+
+# 10.Continuously take words from the user. Skip words shorter than 3 letters, and 
+#    stop the loop when the user enters "stop".
+
+# while True:
+#     word = input("enter word:")
+#     if len(word) < 3:
+#         continue
+#     if word == "stop":
+#         break
+#     print(word)
+
+
+# level increased 
+
+# 1.Keep asking the user to enter numbers. Skip negative numbers using continue. 
+#   Stop if the running sum of entered numbers exceeds 500.
+
+# sum = 0
+# while True:
+#     num = int(input("Enter number:"))
+#     if num < 0:
+#         continue
+#     sum += num
+#     if sum > 500:
+#         break
+#     print(num)
    
+
+# 2.Continuously read characters from the user. Skip vowels using continue. 
+#   Stop the loop if the user enters a digit.
+
+# while True:
+#     char = input("Enter character:")
+#     if char == "a" or char == "e" or char == "i" or char == "o" or char == "u":
+#         continue
+#     if char.isdigit():
+#         break
+#     print(char)
+
+
+# 3.Keep generating random numbers between 1–20. Skip numbers less than 5 using continue.
+#   Stop when you get exactly 13.
+
+# while True:
+#     num = int(input("Enter any number:"))
+#     if num < 5:
+#         continue
+#     if num == 13:
+#         break
+#     if num > 20:
+#         break
+#     print(num)
+
+
+# 4.Start with a counter at 50. Keep subtracting 3 each loop. Skip printing if the result is negative. 
+#   Stop the loop if the counter becomes exactly 11.
+
+# counter = 50
+# i = 3
+# while counter >= 11:
+#     if counter  == 11:
+#         break
+#     print(counter)
+#     counter -= i
+
+
+# 5.Continuously accept numbers from the user. 
+#  Skip multiples of 10. Stop if the number is prime.
+num = int(input("Enter a number: "))
+if num < 2:
+    print("Not prime")
+else:
+    i = 2
+    is_prime = True
+    while i * i <= num:
+        if num % i == 0:
+            is_prime = False
+            break
+        i += 1
+    if is_prime:
+        print(num, "is prime")
+    else:
+        print(num, "is not prime")
+
