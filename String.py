@@ -1,3 +1,28 @@
+#1.String Traversal 
+# name = "Python"
+# for ch in name:
+#     print(ch)
+
+# for i in range(len(name)):
+#     print(i,":",name[i])
+
+#2.Extracting substring from string 
+# text = "Programming"
+# print(text[3:-1])
+# print(text[0:5])
+
+# 3.Pattern Matching / Searching in Strings 
+#  (i)Using in Operator
+# text = "I Love Programming"
+# print("Love" in text)
+# print("python" in text)
+
+# (ii)Using find() Method
+# text = "Programming in python is fun"
+# print(text.find("fun"))
+# print(text.find("play"))
+
+
 # 1.Reverse a String
 # Given a string, reverse it without using built-in reverse functions.
 
@@ -27,23 +52,4 @@
 # print(palindrome_checker(word))
 
 
-# // 3. Find out non-repeating character in an array of integers 
-
-# def non_repeating_character(arr):
-#     for i in range(len(arr)):
-#         is_unique = True
-
-#         for j in range(len(arr)):
-#             if i != j and arr[i] == arr[j]:
-#                 is_unique = False
-#                 break
-
-#         if is_unique:
-#             return arr[i]
-        
-#     return None
-
-# arr = [10,10,4,5,4]
-# print(non_repeating_character(arr))
-
-
+# Longest Common Subsequence
