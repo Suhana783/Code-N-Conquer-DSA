@@ -52,4 +52,23 @@
 # print(palindrome_checker(word))
 
 
-# Longest Common Subsequence
+
+
+def lcs_recursive(s1, s2, i, j):
+    # Base case
+    if i == 0 or j == 0:
+        return 0
+    
+    # If last characters match
+    if s1[i-1] == s2[j-1]:
+        return 1 + lcs_recursive(s1, s2, i-1, j-1)
+    
+    # If last characters don’t match
+    else:
+        return max(lcs_recursive(s1, s2, i-1, j), 
+                   lcs_recursive(s1, s2, i, j-1))
+
+# Example
+s1 = "ABCDEF"
+s2 = "AEBDF"
+print("LCS length:", lcs_recursive(s1, s2, len(s1), len(s2)))
