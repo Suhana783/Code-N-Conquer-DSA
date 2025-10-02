@@ -41,10 +41,43 @@
 # for i in range(n-1):
 #     min_index = i
 #     for j in range(i+1,n):
-#         arr[j] < arr[min_index]
-#         min_index = j
-#         arr[i], arr[min_index] = arr[min_index], arr[i]
+#         if arr[j] < arr[min_index]:
+#             min_index = j
+#             arr[i], arr[min_index] = arr[min_index], arr[i]
+           
 
 # print(arr)
 
 
+def merge_sort(arr):
+    if len(arr) <= 1:
+        return arr
+    mid = len(arr) // 2
+    l_half = arr[:mid]
+    # print(arr[:mid])
+    r_half = arr[mid:]
+    # print(arr[mid:])
+    l_half = merge_sort(l_half)
+    # print(l_half)
+    r_half = merge_sort(r_half)
+    # print(r_half)
+    return merge(l_half,r_half)
+
+def merge(left,right):
+    new = []
+    i,j = 0,0
+    while i < len(left) and j < len(right):
+        if left[i] < right[j]:
+            new.append(left[i])
+            i += 1
+        else:
+            new.append(right[j])
+            j += 1
+    new.extend(left[i:])
+    print(new)
+    new.extend(right[j:])
+    return new
+
+
+arr = [12,6,7,3,15]
+print(merge_sort(arr))

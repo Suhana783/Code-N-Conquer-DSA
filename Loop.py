@@ -219,3 +219,37 @@ else:
     else:
         print(num, "is not prime")
 
+# 6.write a python function that takes a list of numbers and returns a new list with each number squared, 
+#    using a loop and finds its time complexity
+# def squared_num(list):
+#     new_list = []
+#     for i in range(len(list)):
+#         new_list.append(list[i]*list[i])
+#     return new_list
+
+# list = [2,4,3,6,7,1]
+# print(squared_num(list))
+
+
+# 7.Write a programme to find the factorial of a number using loop 
+
+# num = int(input("Enter any number:"))
+# product = 1
+# for i in range(1,num+1):
+#     product = product * i
+# print(product)
+
+# 8.write a function that accepts a list and returns the sum of 
+#   even numbers in the list and calculate its time complexity
+
+# def prime_num(list):
+#     sum = 0
+#     for i in range(len(list)):
+#         if list[i] % 2 == 0:
+#             sum += list[i]
+#     return sum
+
+# list = [2,4,1,3,5,7]
+# print(prime_num(list))
+
+
