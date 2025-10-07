@@ -20,19 +20,19 @@
 
 # 2.second way of insertion_sort 
 
-# def insertion_sort(arr):
-#  for i in range(1,len(arr)):
-#     key = arr[i]
-#     j = i-1
-#     while j >= 0 and arr[j] > key:
-#       arr[j+1] = arr[j]
-#       j -= 1
+def insertion_sort(arr):
+ for i in range(1,len(arr)):
+    key = arr[i]
+    j = i-1
+    while j >= 0 and arr[j] > key:
+      arr[j+1] = arr[j]
+      j -= 1
 
-#     arr[j+1] = key 
-#  return arr 
+    arr[j+1] = key 
+ return arr 
 
-# arr = [8, 3, 5, 2]
-# print(insertion_sort(arr))
+arr = [8, 3, 5, 2]
+print(insertion_sort(arr))
 
 # 3.selection_sort 
 
@@ -49,55 +49,55 @@ for i in range(n-1):
 print(arr)
 
 # 4. Merge sort 
-# def merge_sort(arr):
-#     if len(arr) <= 1:
-#         return arr
-#     mid = len(arr) // 2
-#     l_half = arr[:mid]
-#     # print(arr[:mid])
-#     r_half = arr[mid:]
-#     # print(arr[mid:])
-#     l_half = merge_sort(l_half)
-#     # print(l_half)
-#     r_half = merge_sort(r_half)
-#     # print(r_half)
-#     return merge(l_half,r_half)
+def merge_sort(arr):
+    if len(arr) <= 1:
+        return arr
+    mid = len(arr) // 2
+    l_half = arr[:mid]
+    # print(arr[:mid])
+    r_half = arr[mid:]
+    # print(arr[mid:])
+    l_half = merge_sort(l_half)
+    # print(l_half)
+    r_half = merge_sort(r_half)
+    # print(r_half)
+    return merge(l_half,r_half)
 
-# def merge(left,right):
-#     new = []
-#     i,j = 0,0
-#     while i < len(left) and j < len(right):
-#         if left[i] < right[j]:
-#             new.append(left[i])
-#             i += 1
-#         else:
-#             new.append(right[j])
-#             j += 1
-#     new.extend(left[i:])
-#     print(new)
-#     new.extend(right[j:])
-#     return new
+def merge(left,right):
+    new = []
+    i,j = 0,0
+    while i < len(left) and j < len(right):
+        if left[i] < right[j]:
+            new.append(left[i])
+            i += 1
+        else:
+            new.append(right[j])
+            j += 1
+    new.extend(left[i:])
+    print(new)
+    new.extend(right[j:])
+    return new
 
 
-# arr = [12,6,7,3,15]
-# print(merge_sort(arr))
+arr = [12,6,7,3,15]
+print(merge_sort(arr))
 
 
 
 # 5. Quick sort 
 
-# def quick_sort(arr):
-#     if len(arr) <= 1:
-#         return arr
-#     pivot = arr[len(arr) // 2] 
+def quick_sort(arr):
+    if len(arr) <= 1:
+        return arr
+    pivot = arr[len(arr) // 2] 
 
-#     left = [x for x in arr if x < pivot]
-#     middle = [x for x in arr if x == pivot]
-#     right = [x for x in arr if x > pivot]
+    left = [x for x in arr if x < pivot]
+    middle = [x for x in arr if x == pivot]
+    right = [x for x in arr if x > pivot]
 
-#     return quick_sort(left) + middle + quick_sort(right)
-# arr = [8,7,3,1,0,9]
-# print(quick_sort(arr))
+    return quick_sort(left) + middle + quick_sort(right)
+arr = [8,7,3,1,0,9]
+print(quick_sort(arr))
 
 
 # 6 Bubble sort 

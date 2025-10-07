@@ -53,22 +53,37 @@
 
 
 
+# 1. Longest Common Subsequence 
+# def lcs_recursive(s1, s2, i, j):
+#     # Base case
+#     if i == 0 or j == 0:
+#         return 0
+    
+#     # If last characters match
+#     if s1[i-1] == s2[j-1]:
+#         return 1 + lcs_recursive(s1, s2, i-1, j-1)
+    
+#     # If last characters don’t match
+#     else:
+#         return max(lcs_recursive(s1, s2, i-1, j), 
+#                    lcs_recursive(s1, s2, i, j-1))
 
-def lcs_recursive(s1, s2, i, j):
-    # Base case
-    if i == 0 or j == 0:
-        return 0
+# # Example
+# s1 = "ABCDEF"
+# s2 = "AEBDF"
+# print("LCS length:", lcs_recursive(s1, s2, len(s1), len(s2)))
+
+
+# Naive Pattern Matching (Easy code)
+def naive_search(text, pattern):
+    n = len(text)
+    m = len(pattern)
     
-    # If last characters match
-    if s1[i-1] == s2[j-1]:
-        return 1 + lcs_recursive(s1, s2, i-1, j-1)
-    
-    # If last characters don’t match
-    else:
-        return max(lcs_recursive(s1, s2, i-1, j), 
-                   lcs_recursive(s1, s2, i, j-1))
+    for i in range(n - m + 1):
+        if text[i:i+m] == pattern:
+            print(f"Pattern found at index {i}")
 
 # Example
-s1 = "ABCDEF"
-s2 = "AEBDF"
-print("LCS length:", lcs_recursive(s1, s2, len(s1), len(s2)))
+text = "AABAACAADAABAABA"
+pattern = "AABA"
+naive_search(text, pattern)
