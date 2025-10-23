@@ -75,15 +75,77 @@
 
 
 # Naive Pattern Matching (Easy code)
-def naive_search(text, pattern):
-    n = len(text)
-    m = len(pattern)
+# def naive_search(text, pattern):
+#     n = len(text)
+#     m = len(pattern)
     
-    for i in range(n - m + 1):
-        if text[i:i+m] == pattern:
-            print(f"Pattern found at index {i}")
+#     for i in range(n - m + 1):
+#         if text[i:i+m] == pattern:
+#             print(f"Pattern found at index {i}")
 
-# Example
-text = "AABAACAADAABAABA"
-pattern = "AABA"
-naive_search(text, pattern)
+# # Example
+# text = "AABAACAADAABAABA"
+# pattern = "AABA"
+# naive_search(text, pattern)
+
+
+# Longest Common Prefix
+
+# 1.Find the longest common prefix for the following list of strings:
+# ["apple", "app", "april"]
+
+# def longestCommonPrefix(strs):
+#     prefix = strs[0]
+#     for i in range(1,len(strs)):
+#         current_word = strs[i]
+#         j = 0
+
+#         while j < len(prefix) and j < len(current_word) and prefix[j] == current_word[j]:
+#             j += 1
+
+#         prefix = prefix[:j]
+#         if prefix == "":
+#             break
+#     return prefix
+
+# strs = ["apple", "app", "april"] 
+# print(longestCommonPrefix(strs))
+
+
+# # 2.Find the LCP for:return "" for no match
+# # ["dog", "cat", "bird"]
+
+# def longestCommonPrefix(strs):
+#     prefix = strs[0]
+#     for i in range(1,len(strs)):
+#         current_word = strs[i]
+#         j = 0
+
+#         while j < len(prefix) and j < len(current_word) and prefix[j] == current_word[j]:
+#             j += 1
+#         prefix = prefix[:j]
+#         if prefix == "":
+#          return ""
+#     return prefix
+
+# strs = ["dog", "cat", "bird"]
+# print(longestCommonPrefix(strs))
+
+
+# 3.Challenge: large input
+#   ["flow", "flower", "flight", "flourish", "flip"]
+
+def longestCommonPrefix(words):
+    prefix = words[0]
+    for i in range(1,len(words)):
+        current_word = words[i]
+        j = 0
+
+        while j < len(prefix) and j < len(current_word) and prefix[j] == current_word[j]:
+            j += 1
+        prefix = prefix[:j]
+        if prefix == "":
+            return ""
+    return prefix 
+words = ["flow", "flower", "flight", "flourish", "flop"]
+print(longestCommonPrefix(words))
