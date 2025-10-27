@@ -36,3 +36,22 @@
 # arr = [85, 42, 73, 91, 58]
 # print(second_lowest(arr))
 
+
+# 3. Median of two sorted array. 
+nums1 = [1,3]
+nums2 = [2]
+median = 0
+nums1.extend(nums2)
+n = len(nums1)
+for i in range(n):
+    for j in range(n-i-1):
+        if nums1[j] > nums1[j+1]:
+            nums1[j],nums1[j+1] = nums1[j+1],nums1[j]
+mid = n // 2
+if n % 2 != 0:
+    median = nums1[mid]
+else:
+    median = (nums1[mid - 1] + nums1[mid]) / 2
+
+print(median)
+
