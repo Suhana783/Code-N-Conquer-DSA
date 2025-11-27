@@ -135,17 +135,72 @@
 # 3.Challenge: large input
 #   ["flow", "flower", "flight", "flourish", "flip"]
 
-def longestCommonPrefix(words):
-    prefix = words[0]
-    for i in range(1,len(words)):
-        current_word = words[i]
-        j = 0
+# def longestCommonPrefix(words):
+#     prefix = words[0]
+#     for i in range(1,len(words)):
+#         current_word = words[i]
+#         j = 0
 
-        while j < len(prefix) and j < len(current_word) and prefix[j] == current_word[j]:
-            j += 1
-        prefix = prefix[:j]
-        if prefix == "":
-            return ""
-    return prefix 
-words = ["flow", "flower", "flight", "flourish", "flop"]
-print(longestCommonPrefix(words))
+#         while j < len(prefix) and j < len(current_word) and prefix[j] == current_word[j]:
+#             j += 1
+#         prefix = prefix[:j]
+#     return prefix 
+
+# words = ["flow", "flower", "flight", "flourish", "flop"]
+# print(longestCommonPrefix(words))
+
+
+# 4.Find the longest prefix of the given string which is also a suffix.
+# Input :- "abcdabcabcd"
+# Output:- "abcd"
+
+# s = "abcdabcabcd"
+# longest = ""
+# for i in range(1,len(s)):
+#     prefix = s[:i]
+#     suffix = s[-i:]
+#     if prefix == suffix:
+#         longest = prefix
+# print(longest)
+
+
+# 6. Reverse a String
+# Problem: Given a string s, return the reversed string.
+# Example: "hello" → "olleh"
+
+# def reverse_string(s):
+#     return s[::-1]
+
+# print(reverse_string("hello"))            
+
+
+# Given a string s, return the index of the first character that does not 
+# repeat.If no such character exists, return -1.
+
+s = "nanno"
+found = False
+
+for i in range(len(s)):
+    count = 0
+    for j in range(len(s)):
+        if s[i] == s[j]:
+            count += 1
+    if count == 1:
+        print(i)
+        found = True
+        break
+
+if not found:
+    print(-1)
+
+# Count occurrences of a character
+# Input: string = "banana", char = "a"
+# Output: 3
+
+string = "banana"
+char = "a"
+count = 0
+for i in range(len(string)):
+    if string[i] == char:
+        count += 1
+print(count)
