@@ -18,37 +18,38 @@
             
 
 
-# 2.second way of insertion_sort 
+# # 2.second way of insertion_sort 
 
-def insertion_sort(arr):
- for i in range(1,len(arr)):
-    key = arr[i]
-    j = i-1
-    while j >= 0 and arr[j] > key:
-      arr[j+1] = arr[j]
-      j -= 1
+# def insertion_sort(arr):
+#  for i in range(1,len(arr)):
+#     key = arr[i]
+#     j = i-1
+#     while j >= 0 and arr[j] > key:
+#       arr[j+1] = arr[j]
+#       j -= 1
 
-    arr[j+1] = key 
- return arr 
+#     arr[j+1] = key 
+#  return arr 
 
-arr = [8, 3, 5, 2]
-print(insertion_sort(arr))
+# arr = [8, 3, 5, 2]
+# print(insertion_sort(arr))
 
-# 3.selection_sort 
+# # 3.selection_sort 
 
-arr = [5,3,8,4,19,0]
-n = len(arr)
-for i in range(n-1):
-    min_index = i
-    for j in range(i+1,n):
-        if arr[j] < arr[min_index]:
-            min_index = j
-    arr[i], arr[min_index] = arr[min_index], arr[i]
+# arr = [5,3,8,4,19,0]
+# n = len(arr)
+# for i in range(n-1):
+#     min_index = i
+#     for j in range(i+1,n):
+#         if arr[j] < arr[min_index]:
+#             min_index = j
+#     arr[i], arr[min_index] = arr[min_index], arr[i]
            
 
-print(arr)
+# print(arr)
 
-# 4. Merge sort 
+# # 4. Merge sort 
+
 def merge_sort(arr):
     if len(arr) <= 1:
         return arr
@@ -84,20 +85,20 @@ print(merge_sort(arr))
 
 
 
-# 5. Quick sort 
+# # 5. Quick sort 
 
-def quick_sort(arr):
-    if len(arr) <= 1:
-        return arr
-    pivot = arr[len(arr) // 2] 
+# def quick_sort(arr):
+#     if len(arr) <= 1:
+#         return arr
+#     pivot = arr[len(arr) // 2] 
 
-    left = [x for x in arr if x < pivot]
-    middle = [x for x in arr if x == pivot]
-    right = [x for x in arr if x > pivot]
+#     left = [x for x in arr if x < pivot]
+#     middle = [x for x in arr if x == pivot]
+#     right = [x for x in arr if x > pivot]
 
-    return quick_sort(left) + middle + quick_sort(right)
-arr = [8,7,3,1,0,9]
-print(quick_sort(arr))
+#     return quick_sort(left) + middle + quick_sort(right)
+# arr = [8,7,3,1,0,9]
+# print(quick_sort(arr))
 
 
 # 6 Bubble sort 
@@ -112,3 +113,5 @@ print(quick_sort(arr))
     
 # arr = [12,16,14,9]
 # print(bubble_sort(arr))
+
+

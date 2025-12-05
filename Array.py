@@ -165,22 +165,122 @@
 
 
 # Given an array of integers, sort the array in ascending order using Bubble Sort.
-arr = [5, 2, 9, 1, 5, 6]
-n = len(arr)
+# arr = [5, 2, 9, 1, 5, 6]
+# n = len(arr)
 
-for i in range(n):
-    for j in range(n-1):
-        if arr[j] > arr[j+1]:
-            arr[j], arr[j+1] = arr[j+1], arr[j]
-print(arr)  
+# for i in range(n):
+#     for j in range(n-1):
+#         if arr[j] > arr[j+1]:
+#             arr[j], arr[j+1] = arr[j+1], arr[j]
+# print(arr)  
             
 # 3. Count even numbers in an array
 # Input: [2, 5, 6, 7, 8]
 
-nums = [2, 5, 6, 7, 8]
+# nums = [2, 5, 6, 7, 8]
+# count = 0
+# for i in range(len(nums)):
+#     if nums[i] % 2 == 0:
+#         count += 1
+# print(count)
+
+  
+# Find the maximum element in an array.Input: [3, 1, 7, 4, 2]
+# arr = [3, 1, 7, 4, 9]
+# z = max(arr)
+# print(z)
+    
+# Remove duplicates from an array while keeping order.
+
+# nums = [1, 2, 2, 3, 1, 4]
+# result = []
+# for n in nums:
+#     if n not in result:
+#         result.append(n)
+
+# print(result)   
+
+# Two Sum Problem 
+# Given an array and a target number, find two numbers whose sum equals the target.
+# Input: nums = [2,7,11,15], target = 9
+# Output: [0,1]
+
+# nums = [2,7,11,15]
+# target = 15
+# for i in range(len(nums)):
+#     for j in range(i+1,len(nums)):
+#         if nums[i] + nums[j] == target:
+#           print(i,j)       
+
+
+
+# Q1. Find the Peak Element in an Array
+# A peak element is an element that is strictly greater than its neighbors.
+# Given an array nums, return any one peak element’s index.
+# Input: nums = [1, 3, 5, 4, 2]
+# Output: 2   (because nums[2] = 5 is a peak)
+
+# nums = [1, 3, 5, 4, 7]
+# i = 1
+
+# while i < len(nums)-1:
+#     if nums[i] > nums[i-1] and nums[i] > nums[i+1]:
+#         print(nums[i])
+#     i += 1
+
+
+# Q2. Longest Substring Without Repeating Characters
+# Given a string s, return the length of the longest substring where no character repeats.
+# Input: s = "abcabcbb"
+# Output: 3   ("abc")
+
+
+# Q1. Longest Consecutive Sequence
+# Given an unsorted array of integers, return the length of the longest sequence of numbers that appear consecutively (in any order).
+# Input: nums = [100, 4, 200, 1, 3, 2]
+# Output: 4  
+# Explanation: The longest consecutive sequence is [1, 2, 3, 4]
+
+# nums = [100, 4, 200, 1, 3, 2]
+
+# n = len(nums)
+# for i in range(n):
+#     for j in range(n-i-1):
+#         if nums[j] > nums[j+1]:
+#             nums[j], nums[j+1] = nums[j+1], nums[j]
+
+# max_len = 1
+# curr_len = 1
+
+# for i in range(1, n):
+#     if nums[i] == nums[i-1] + 1:
+#         curr_len += 1
+#     elif nums[i] == nums[i-1]:
+#         continue
+#     else:
+#         curr_len = 1
+
+#     if curr_len > max_len:
+#         max_len = curr_len
+
+# print(max_len)
+
+# Q2. Subarray Sum Equals K
+# Given an array of integers nums and an integer k, return the total number of continuous subarrays whose sum equals k.
+# Input: nums = [1, 1, 1], k = 2
+# Output: 2  
+# Explanation: Subarrays are [1,1] at indexes (0,1) and (1,2)
+
+nums = [1, 1, 5]
+k = 6
+sum = 0
 count = 0
+
 for i in range(len(nums)):
-    if nums[i] % 2 == 0:
-        count += 1
+    sum = 0
+    for j in range(i, len(nums)):
+        sum += nums[j]
+        if sum == k:
+            count += 1
+
 print(count)
-      
