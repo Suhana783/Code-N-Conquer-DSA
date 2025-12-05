@@ -76,7 +76,56 @@
 # [1, 2, 3, 2, 3, 4, 5]
 # Longest increasing continuous subarray is [2, 3, 4, 5] → length = 4
 
+nums = [1, 2, 3, 2, 3, 4, 5]
+max_l = 0
+for i in range(len(nums)):
+    length = 0
+    for j in range(i,len(nums)):
+        length = j-i+1
+        if max_l < length:
+            max_l = length
+            subarray = nums[i: j+1]
+        
+print(max_l)
 
 
 
 
+
+
+# Count How Many Subarrays Have Sum < 5
+# nums = [1,2,3]
+# sum = 0
+# count = 0
+# for i in range(len(nums)):
+#     total = 0
+#     for j in range(i,len(nums)):
+#         total += nums[j]
+#         if total < 5:
+#             count += 1
+#         sum += total
+#         subarray = nums[i : j+1]
+#         print(subarray,total)
+# print(count)
+
+
+
+# Count subarrays where every number is strictly increasing.
+# nums = [1,2,1]
+# count = 0
+# for i in range(len(nums)):
+#     for j in range(i,len(nums)):
+#         subarray = nums[i: j+1]
+#         is_inc = True
+
+#         for k in range(len(subarray)-1):
+#             if subarray[k] >= subarray[k+1]:
+#                 is_inc = False
+#                 break
+#         if is_inc:
+#             count += 1
+# print(count)
+
+
+
+    
