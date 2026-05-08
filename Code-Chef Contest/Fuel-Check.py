@@ -19,9 +19,11 @@
 # Chef has 1 unit of fuel, and the car can travel 100 kilometers with that fuel.
 
 
-X,Y = map(int, input().split())
-M = X * Y 
-if M >= 100:
-    print("Yes")
-else:
-    print("No")
+# X,Y = map(int, input().split())
+# M = X * Y 
+# if M >= 100:
+#     print("Yes")
+# else:
+#     print("No")
+
+

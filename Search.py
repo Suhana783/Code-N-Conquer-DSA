@@ -12,23 +12,23 @@
 
 # 2. Binary Search 
 
-# def binary_search(arr,target):
-#     low = 0
-#     high = len(arr)-1
-#     while low <= high:
-#         mid = (low + high) // 2
-#         print(low,high)
-#         if arr[mid] == target:
-#             return arr[mid]
-#         if arr[mid] < target:
-#             low = mid + 1
-#         else:
-#             high = mid - 1
+def binary_search(arr,target):
+    low = 0
+    high = len(arr)-1
+    while low <= high:
+        mid = (low + high) // 2
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            low = mid + 1
+        else:
+            high = mid - 1
 
-#     return "doesn't exist"
+    return low
 
-# arr = [1,2,3,4,5,6,7]
-# target = 7
-# print(binary_search(arr,target))
+arr = [1,2,4,5,7]
+target = 6
+print(binary_search(arr,target))
+
 
 

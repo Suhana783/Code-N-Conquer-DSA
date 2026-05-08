@@ -271,16 +271,129 @@
 # Output: 2  
 # Explanation: Subarrays are [1,1] at indexes (0,1) and (1,2)
 
-nums = [1, 1, 5]
-k = 6
-sum = 0
-count = 0
+# nums = [1, 1, 5]
+# k = 6
+# sum = 0
+# count = 0
 
-for i in range(len(nums)):
-    sum = 0
-    for j in range(i, len(nums)):
-        sum += nums[j]
-        if sum == k:
-            count += 1
+# for i in range(len(nums)):
+#     sum = 0
+#     for j in range(i, len(nums)):
+#         sum += nums[j]
+#         if sum == k:
+#             count += 1
 
-print(count)
+# print(count)
+
+
+
+# Find minimum and maximum elements from a given array 
+# arr = [1, 4, 3, 8, 6]
+# min_val = arr[0]
+# max_val = arr[0]
+
+# for i in range(len(arr)):
+#     if arr[i] > max_val:
+#         max_val = arr[i]
+#     elif arr[i] < min_val:
+#         min_val = arr[i]
+
+# print(max_val, min_val)
+
+
+# Question 2: Find the "Kth" maximum element in an unsorted array.
+
+# arr = [10, 5, 4, 3, 48, 6, 2, 33, 53, 10]
+# k = 4
+
+# n = len(arr)
+# for i in range(n-1):
+#     for j in range(n-i-1):
+#         if arr[j] > arr[j+1]:
+#             arr[j],arr[j+1] = arr[j+1], arr[j]
+
+
+# kth_max = arr[n - k]
+# print(kth_max)
+
+
+
+# Reverse an array 
+
+# arr = [2,3,4]
+# i = 0
+# j = len(arr)-1
+# while i <= j and j < len(arr):
+#     arr[i], arr[j] = arr[j], arr[i]
+#     i += 1
+#     j -= 1
+# print(arr)
+            
+
+# Given an unsorted array having both negative and positive integers. Place all 
+# negative elements at the end of the array without changing the order of positive elements 
+# and negative elements.
+
+# def moveNegativesToEnd(arr):
+#     n = len(arr)
+#     temp = []
+
+#     for i in range(n):
+#      if arr[i] >= 0:
+#         temp.append(arr[i])
+
+#     for i in range(n):
+#       if arr[i] < 0:
+#         temp.append(arr[i])
+
+#     for i in range(n):
+#      arr[i] = temp[i]
+
+
+# arr = [1, -1, 3, 2, -7, -5, 11, 6]
+# print(moveNegativesToEnd(arr))
+# print(arr)
+
+
+# You are given an array arr[] of size n - 1 that contains distinct integers in 
+# the range from 1 to n (inclusive). This array represents a permutation of the 
+# integers from 1 to n with one element missing. Your task is to identify and return
+# the missing element.
+
+# arr = [1, 2, 3, 5]
+# n = len(arr) + 1
+    
+# expected_sum = n * (n+1) // 2
+# actual_sum = sum(arr)
+
+# print (expected_sum - actual_sum)
+
+
+# Find the 3rd minimum element in the array.
+# arr = [12, 4, 7, 19, 3, 8, 15]
+# k = 3
+
+# n = len(arr)
+# for i in range (n-1):
+#     for j in range(n-i-1):
+#         if arr[j] > arr[j+1]:
+#             arr[j], arr[j+1] = arr[j+1], arr[j]
+# kth_min = arr[k-1]
+
+# print(kth_min)
+
+
+# Find the second smallest element in the array.
+arr = [7, 2, 9, 1, 5, 3]
+
+min_val = arr[0]
+second_min = 0
+
+for i in range(len(arr)):
+    if arr[i] < min_val:
+        min_val = arr[i]
+        second_min = min_val
+    elif second_min < min_val:
+        second_min = min_val
+print(second_min)
+    

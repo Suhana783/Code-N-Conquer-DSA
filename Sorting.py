@@ -55,13 +55,9 @@ def merge_sort(arr):
         return arr
     mid = len(arr) // 2
     l_half = arr[:mid]
-    # print(arr[:mid])
     r_half = arr[mid:]
-    # print(arr[mid:])
     l_half = merge_sort(l_half)
-    # print(l_half)
     r_half = merge_sort(r_half)
-    # print(r_half)
     return merge(l_half,r_half)
 
 def merge(left,right):
@@ -74,8 +70,7 @@ def merge(left,right):
         else:
             new.append(right[j])
             j += 1
-    new.extend(left[i:])
-    print(new)
+    new.extend(left[i:])                                                                                                                
     new.extend(right[j:])
     return new
 

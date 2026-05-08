@@ -76,17 +76,17 @@
 # [1, 2, 3, 2, 3, 4, 5]
 # Longest increasing continuous subarray is [2, 3, 4, 5] → length = 4
 
-nums = [1, 2, 3, 2, 3, 4, 5]
-max_l = 0
-for i in range(len(nums)):
-    length = 0
-    for j in range(i,len(nums)):
-        length = j-i+1
-        if max_l < length:
-            max_l = length
-            subarray = nums[i: j+1]
+# nums = [1, 2, 3, 2, 3, 4, 5]
+# max_l = 0
+# for i in range(len(nums)):
+#     length = 0
+#     for j in range(i,len(nums)):
+#         length = j-i+1
+#         if max_l < length:
+#             max_l = length
+#             subarray = nums[i: j+1]
         
-print(max_l)
+# print(max_l)
 
 
 
@@ -127,5 +127,22 @@ print(max_l)
 # print(count)
 
 
-
+# Count Subarrays with Positive Sum
+# Count all subarrays whose sum is greater than 0.
+# Example: [1, -2, 3]
+# Possible positive subarrays: [1], [3], [1,-2,3] → 3
     
+# arr = [1,-2,3]
+# count = 0
+# for i in range(len(arr)):
+#     total = 0
+#     sum = 0
+#     for j in range(i,len(arr)):
+#         total += arr[j]
+#         sum = total
+#         subarray = arr[i:j+1]
+#         print(subarray, sum)
+#         if sum > 0:
+#             count += 1
+# print(count)
+

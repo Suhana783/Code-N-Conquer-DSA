@@ -177,30 +177,88 @@
 # Given a string s, return the index of the first character that does not 
 # repeat.If no such character exists, return -1.
 
-s = "nanno"
-found = False
+# s = "nanno"
+# found = False
 
-for i in range(len(s)):
-    count = 0
-    for j in range(len(s)):
-        if s[i] == s[j]:
-            count += 1
-    if count == 1:
-        print(i)
-        found = True
-        break
+# for i in range(len(s)):
+#     count = 0
+#     for j in range(len(s)):
+#         if s[i] == s[j]:
+#             count += 1
+#     if count == 1:
+#         print(i)
+#         found = True
+#         break
 
-if not found:
-    print(-1)
+# if not found:
+#     print(-1)
 
 # Count occurrences of a character
 # Input: string = "banana", char = "a"
 # Output: 3
 
-string = "banana"
-char = "a"
-count = 0
-for i in range(len(string)):
-    if string[i] == char:
-        count += 1
-print(count)
+# string = "banana"
+# char = "a"
+# count = 0
+# for i in range(len(string)):
+#     if string[i] == char:
+#         count += 1
+# print(count)
+
+
+
+
+# Write a function that reverses a string. The input string is given as an array of characters s.
+# s = ["h","e","l","l","o"]
+# Output: ["o","l","l","e","h"] 
+
+# left = 0
+# right = len(s)-1
+
+# while left < right:
+#     s[left], s[right] = s[right], s[left]
+#     left += 1
+#     right -= 1
+# print(s)
+
+
+# Q1: Write a program to find and list all the duplicate characters present in a given string.
+
+# s = "banana"
+# duplicate_val = []
+
+
+# s = s.lower()
+# for i in range(len(s)):
+#     j = i+1
+
+#     while j < len(s):
+#         if s[i] == s[j] and s[i] not in duplicate_val:
+#             duplicate_val.append(s[i])
+#         j += 1
+# print(duplicate_val)
+
+
+# Given a string s which may contain lowercase and uppercase characters. The task is 
+# to remove all duplicate characters from the string and find the resultant string. 
+# The order of remaining characters in the output should be same as in the original string.
+           
+# s = "geEksforGEeks"
+# i = 0
+# j = len(s)-1
+# duplicate_val = []
+
+# s = s.lower()
+# while i <= j and j < len(s):
+#     if s[i] == s[j]:
+#         duplicate_val.append(s[i])
+#         j -= 1
+#     i += 1
+    
+# print(duplicate_val)
+
+    
+
+            
+        
+
